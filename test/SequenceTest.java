@@ -29,16 +29,31 @@ public class SequenceTest {
 
     @Test
     public void singleNumberTest() throws Exception {
-        List <Integer>input=new ArrayList<>(Arrays.asList(1));
-        List<Integer>real=getSubSequence(input);
-        assertThat(real,is(new ArrayList<>(Arrays.asList(1))));
+        List<Integer> input = new ArrayList<>(Arrays.asList(1));
+        List<Integer> real = getSubSequence(input);
+        assertThat(real, is(new ArrayList<>(Arrays.asList(1))));
     }
 
     @Test
     public void doubleNumberTest() throws Exception {
-        List <Integer>input=new ArrayList<>(Arrays.asList(1,8));
-        List<Integer>real=getSubSequence(input);
-        assertThat(real,is(new ArrayList<>(Arrays.asList(1,8))));
+        List<Integer> input = new ArrayList<>(Arrays.asList(1, 8));
+        List<Integer> real = getSubSequence(input);
+        assertThat(real, is(new ArrayList<>(Arrays.asList(1, 8))));
+    }
+
+    @Test
+    public void multipleNumberTest() throws Exception {
+        List<Integer> input = new ArrayList<>(Arrays.asList(8, 9, -1, 3));
+        List<Integer> real = getSubSequence(input);
+        assertThat(real, is(new ArrayList<>(Arrays.asList(8, 9, -1, 3))));
+
+    }
+
+    @Test
+    public void allPositiveNumbers() throws Exception {
+        List<Integer> input = new ArrayList<>(Arrays.asList(8, 9, 7, 3));
+        List<Integer> real = getSubSequence(input);
+        assertThat(real, is(new ArrayList<>(Arrays.asList(8, 9, 7, 3))));
 
     }
 }
