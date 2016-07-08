@@ -32,6 +32,13 @@ public class SequenceTest {
         List <Integer>input=new ArrayList<>(Arrays.asList(1));
         List<Integer>real=getSubSequence(input);
         assertThat(real,is(new ArrayList<>(Arrays.asList(1))));
+    }
+
+    @Test
+    public void doubleNumberTest() throws Exception {
+        List <Integer>input=new ArrayList<>(Arrays.asList(1,8));
+        List<Integer>real=getSubSequence(input);
+        assertThat(real,is(new ArrayList<>(Arrays.asList(1,8))));
 
     }
 }
