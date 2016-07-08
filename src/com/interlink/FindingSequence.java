@@ -8,6 +8,10 @@ import java.util.List;
  */
 public class FindingSequence {
     public static List<Integer> getSubSequence(List<Integer> sequence) {
-        return new ArrayList<>();
+        List<Integer>subSequence=new ArrayList<>();
+        if(sequence==null||sequence.size()==0)return new ArrayList<>();
+        subSequence.add(sequence.get(0));
+        return subSequence;
+
     }
 }
